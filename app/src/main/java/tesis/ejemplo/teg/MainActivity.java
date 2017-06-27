@@ -81,6 +81,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.action_settings) {
+            vamos = new Intent(MainActivity.this,Informacion.class);
+            startActivity(vamos);
             return true;
         }
 

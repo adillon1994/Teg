@@ -3,6 +3,7 @@ package tesis.ejemplo.teg;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -20,6 +21,10 @@ public class VideoGrande extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_grande);
+
+        ActionBar flecha= getSupportActionBar();
+        flecha.setDisplayHomeAsUpEnabled(true);
+
         Bundle extra = getIntent().getExtras();
         camara = extra.getInt("camara");
         progressBar= (ProgressBar)findViewById(R.id.myprogressbar);
@@ -37,15 +42,6 @@ public class VideoGrande extends AppCompatActivity {
                 videoG.setVideoURI(uri1);
                 videoG.requestFocus();
                 videoG.start();
-                videoG.setOnTouchListener(new View.OnTouchListener() {
-                    @Override
-                    public boolean onTouch(View v, MotionEvent event) {
-                        ir = new Intent(VideoGrande.this, MainActivity.class);
-                        startActivity(ir);
-                        return false;
-                    }
-                });
-                break;
             }
             case 2: {
                 videoG = (VideoView) findViewById(R.id.video);
@@ -53,15 +49,6 @@ public class VideoGrande extends AppCompatActivity {
                 videoG.setVideoURI(uri2);
                 videoG.requestFocus();
                 videoG.start();
-                videoG.setOnTouchListener(new View.OnTouchListener() {
-                    @Override
-                    public boolean onTouch(View v, MotionEvent event) {
-                        ir = new Intent(VideoGrande.this, MainActivity.class);
-                        startActivity(ir);
-                        return false;
-                    }
-                });
-                break;
             }
             case 3: {
                 videoG = (VideoView) findViewById(R.id.video);
@@ -69,15 +56,6 @@ public class VideoGrande extends AppCompatActivity {
                 videoG.setVideoURI(uri3);
                 videoG.requestFocus();
                 videoG.start();
-                videoG.setOnTouchListener(new View.OnTouchListener() {
-                    @Override
-                    public boolean onTouch(View v, MotionEvent event) {
-                        ir = new Intent(VideoGrande.this, MainActivity.class);
-                        startActivity(ir);
-                        return false;
-                    }
-                });
-                break;
             }
             case 4: {
                 videoG = (VideoView) findViewById(R.id.video);
@@ -85,15 +63,6 @@ public class VideoGrande extends AppCompatActivity {
                 videoG.setVideoURI(uri4);
                 videoG.requestFocus();
                 videoG.start();
-                videoG.setOnTouchListener(new View.OnTouchListener() {
-                    @Override
-                    public boolean onTouch(View v, MotionEvent event) {
-                        ir = new Intent(VideoGrande.this, MainActivity.class);
-                        startActivity(ir);
-                        return false;
-                    }
-                });
-                break;
             }
             case 5: {
                 videoG = (VideoView) findViewById(R.id.video);
@@ -101,15 +70,7 @@ public class VideoGrande extends AppCompatActivity {
                 videoG.setVideoURI(uri5);
                 videoG.requestFocus();
                 videoG.start();
-                videoG.setOnTouchListener(new View.OnTouchListener() {
-                    @Override
-                    public boolean onTouch(View v, MotionEvent event) {
-                        ir = new Intent(VideoGrande.this, MainActivity.class);
-                        startActivity(ir);
-                        return false;
-                    }
-                });
-                break;
+
             }
 
         }

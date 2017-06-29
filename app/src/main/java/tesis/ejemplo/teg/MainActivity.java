@@ -1,6 +1,7 @@
 package tesis.ejemplo.teg;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -37,6 +38,9 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -120,7 +124,7 @@ public class MainActivity extends AppCompatActivity
     protected void onResume() {
         super.onResume();
         video1 = (VideoView) findViewById(R.id.video11);
-        final Uri uri1 = Uri.parse("RTSP://192.168.0.110:5554/vs");
+        final Uri uri1 = Uri.parse("RTSP://192.168.198.135:5554/vs");
         video1.setVideoURI(uri1);
         video1.requestFocus();
         video1.start();
@@ -135,7 +139,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
         video2 = (VideoView) findViewById(R.id.video22);
-        final Uri uri2 = Uri.parse("RTSP://192.168.0.110:5554/vs");
+        final Uri uri2 = Uri.parse("RTSP://192.168.198.135:5554/vs");
         video2.setVideoURI(uri2);
         video2.requestFocus();
         video2.start();
@@ -150,7 +154,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
         video3 = (VideoView) findViewById(R.id.video33);
-        final Uri uri3 = Uri.parse("RTSP://192.168.0.110:5554/vs");
+        final Uri uri3 = Uri.parse("RTSP://192.168.198.135:5554/vs");
         video3.setVideoURI(uri3);
         video3.requestFocus();
         video3.start();
@@ -165,7 +169,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
         video4 = (VideoView) findViewById(R.id.video44);
-        final Uri uri4 = Uri.parse("RTSP://192.168.0.110:5554/vs");
+        final Uri uri4 = Uri.parse("RTSP://192.168.198.135:5554/vs");
         video4.setVideoURI(uri4);
         video4.requestFocus();
         video4.start();
@@ -180,7 +184,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
         video5 = (VideoView) findViewById(R.id.video55);
-        final Uri uri5 = Uri.parse("RTSP://192.168.0.110:5554/vs");
+        final Uri uri5 = Uri.parse("RTSP://192.168.198.135:5554/vs");
         video5.setVideoURI(uri5);
         video5.requestFocus();
         video5.start();
